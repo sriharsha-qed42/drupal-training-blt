@@ -1,0 +1,10 @@
+{
+    "require": {
+        "acquia/blt": "^13.7"
+    },
+    "config": {
+        "allow-plugins": {
+            "acquia/blt": true
+        }
+    }
+}

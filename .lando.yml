@@ -1,0 +1,19 @@
+name: drupal-multisite
+recipe: drupal9
+config:
+  webroot: web
+  drush: ^10
+  xdebug: true
+  via: nginx
+services:
+  database:
+    type: mariadb:10.5
+tooling:
+  blt:
+    service: appserver
+    cmd: /app/vendor/bin/blt
+proxy:
+  appserver_nginx:
+    - subsite1.lndo.site
+    - subsite2.lndo.site
+    - subsite3.lndo.site
